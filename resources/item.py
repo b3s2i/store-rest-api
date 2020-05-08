@@ -45,7 +45,7 @@ class Item(Resource):
         if item:
             item.delete_from_db()
 
-        return{'message': 'item {} deleted'.format(item)}
+        return{'message': 'item {} deleted'.format(name)}
 
     def put(self, name):
         data = Item.parser.parse_args()
